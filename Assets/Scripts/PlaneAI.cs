@@ -51,8 +51,8 @@ public class PlaneAI : MonoBehaviour
 
     private void Kill()
     {
-        enemyController.DecreaseNumberOfEnemiesEnemy();
-        enemyController.CheckNumberOfEnemiesEnemy();
+        enemyController.DecreaseNumberOfEnemies();
+        enemyController.CheckNumberOfEnemies();
         Destroy(gameObject);
     }
 }

@@ -22,7 +22,7 @@ public class UIController : MonoBehaviour
 
         UIActionIsActive = false;
     }
-    public void ActivateUI()
+    public void ShowUI()
     {
         UI.SetActive(true);
         UIActionIsActive = true;

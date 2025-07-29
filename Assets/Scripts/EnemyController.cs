@@ -1,31 +1,28 @@
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class EnemyController : MonoBehaviour
 {
-    private static int numberOfEnemiesEnemy;
+    private static int numberOfEnemies;
     private List<GameObject> enemies;
-
-    public static EnemyController instance;
 
     private void Awake()
     {
         enemies = new List<GameObject>();
         GameObject.FindGameObjectsWithTag("Enemy", enemies);
-        numberOfEnemiesEnemy = enemies.Count;
+        numberOfEnemies = enemies.Count;
     }
 
-    public void DecreaseNumberOfEnemiesEnemy()
+    public void DecreaseNumberOfEnemies()
     {
-        numberOfEnemiesEnemy--;
+        numberOfEnemies--;
     }
 
-    public void CheckNumberOfEnemiesEnemy()
+    public void CheckNumberOfEnemies()
     {
-        if (numberOfEnemiesEnemy <= 0)
+        if (numberOfEnemies <= 0)
         {
-            UIController.instance.ActivateUI();
+            UIController.instance.ShowUI();
             UIController.instance.DeactivateInputSystem();
         }
     }
