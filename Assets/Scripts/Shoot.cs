@@ -16,8 +16,6 @@ public class Shoot : MonoBehaviour
 
     private float bulletSpeed = 100;
 
-    //[SerializeField] private ParticleSystem shootingSystem;
-
     private float lastShootTime;
 
     private void FixedUpdate()
@@ -90,6 +88,5 @@ public class Shoot : MonoBehaviour
         }
         trail.transform.position = HitPoint;
         Destroy(trail.gameObject, trail.time);
-        // <= part sys
     }
 }

@@ -20,7 +20,6 @@ public class PlaneAI : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
         health = maxHealth;
-        //enemyController = new EnemyController();
     }
 
     private void FixedUpdate()
